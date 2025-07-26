@@ -1,0 +1,67 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.curso {
+    background-image: url('../assets/img/fondos/fondoPasto.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__principal {
+        margin-top: v.$spaceRegular;
+
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceSmall;
+
+        &--avisos{
+            display: flex;
+            flex-direction: column;
+            gap: v.$spaceTiny;
+
+            @include m.tablet {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: v.$spaceRegular;
+            }
+        }
+
+        &--grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: v.$spaceSmall;
+
+            @include m.tablet {
+                grid-template-columns: repeat(2, 1fr);
+                gap: v.$spaceRegular;
+                align-items: center;
+            }
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceTiny;
+
+        &--link {
+            text-decoration: none;
+            @include m.btn(v.$color2, v.$colorLight, v.$colorBackground2, v.$colorDark);
+
+            &:nth-child(even) {
+                @include m.btn(v.$color3, v.$colorLight, v.$colorBackground3, v.$colorDark);
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+        height: auto;
+
+        @include m.desktop {
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+}

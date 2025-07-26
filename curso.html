@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <!--TITLE-->
+    <title>Curso</title>
+    <!--META-->
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Comunicación única entre dos almas. Comunicación con cualquier animal, vivos o fallecidos.">
+    <meta name="keywords" content="Animales, Raabta, Comunicación, Espiritualidad, Conexión, Almas, Vivos, Fallecidos">
+    <meta name="author" content="Aimee Vértiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="./build//assets/img/logo.avif">
+    <!--PAGE RELATIONS-->
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!--class="tittle animate-on-scroll" data-anim="animate__name"-->
+</head>
+
+<body>
+    <header class="login">
+        <div class="login__container blockWidth">
+            <div class="header__logo">
+                <img class="header__logo--img" src="./build/assets/img/logo.avif" lazyalt="logo" loading="lazy"
+                    decoding="async">
+                <p class="header__logo--text">RAABTA</p>
+            </div>
+
+            <div class="login__info">
+                <p class="login__info--description">Ingresa con tu <span class="highlight">contraseña de alumno o exalumno</span> para ingresar al Curso de Comunicación Animal.</p>
+                <form class="login__form" action="" method="">
+                    <input class="login__form--input nameUser" type="text" name="name" placeholder="Escribe tu nombre"
+                        >
+                    <input class="login__form--input psw" type="password" name="password" placeholder="Escribe la contraseña"
+                        >
+                    <button class="login__form--button" type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </header>
+
+    <section class="curso">
+        <div class="curso__container blockWidth">
+            <div class="header__logo">
+                <img class="header__logo--img" src="./build/assets/img/logo.avif" lazyalt="logo" loading="lazy"
+                    decoding="async">
+                <p class="header__logo--text">RAABTA</p>
+            </div>
+            <div class="curso__principal">
+                <h1 class="curso__principal--title"><span class="curso__principal--name"></span></h1>
+                <div class="curso__principal--grid">
+                    <p class="curso__principal--subtitle"></p>
+                    <div class="curso__links">
+                    </div>
+                </div>
+
+                <img class="curso__img" src="build/assets/img/curso/dog.avif"
+                    lazyalt="dog" loading="lazy" decoding="async">
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer__container blockWidth">
+            <div class="footer__info">
+                <div class="footer__logo">
+                    <img class="footer__logo--img" src="./build/assets/img/logo.avif" lazyalt="logo" loading="lazy"
+                        decoding="async">
+                    <p class="footer__logo--text">RAABTA</p>
+                </div>
+                <div class="footer__socials">
+                    <a target="_blank" class="footer__social" href="https://www.instagram.com/__.raabta__/"><img src="./build/assets/icons/social1.avif"
+                            alt="Instagram"></a>
+                    <a target="_blank" class="footer__social" href="https://wa.me/525572729406?text=¡Hola! Me gustaría información ..."><img src="./build/assets/icons/social2.avif"
+                            alt="WhatsApp"></a>
+                    <a target="_blank" class="footer__social" href="mailto:raabta.animales@gmail.com"><img src="./build/assets/icons/social3.avif"
+                            alt="Email"></a>
+                </div>
+            </div>
+            <div class="footer__copy">
+                <p class="footer__copy--rights"></p>
+                <p class="footer__copy--dev">Website desarrollado por: <a target="_blank" href="https://devri.com.mx/">Devri Solutions</a></p>
+            </div>
+        </div>
+        <img src="./build/assets/img/inicio/footer.avif"
+            lazyalt="" loading="lazy" decoding="async" 
+            class="footer__img">
+    </footer>
+
+    <script src="animate.js"></script>
+    <script>
+        const copy = document.querySelector('.footer__copy--rights');
+        const year = new Date().getFullYear();
+        copy.textContent = `© ${year} Raabta. Todos los derechos reservados.`;
+    </script>
+    <script src="curso.js"></script>
+</body>
+
+</html>

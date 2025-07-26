@@ -1,0 +1,35 @@
+// SYSTEM DESIGN TOKEN
+
+// FONTS CONFIG
+@font-face {
+  font-family: 'Aimee';
+  src: url('../../../build/assets/fonts/Aimee-Regular\ 2.ttf') format('truetype'),
+       url('../../../build/assets/fonts/Aimee-Regular\ 2.otf') format('opentype');
+}
+$fontFamilyPrimary: "Aimee", sans-serif; // Primary font exported from Google Fonts
+$fontWeightRegular: 400; // Regular font weight
+$fontWeightBold: 800; // Bold font weight
+$fontStyle: normal; // Font style
+
+
+// BRAND AND SITE COLORIMETRY SETUP
+$colorBackground1: #bfe7f3;
+$colorBackground2: #f3bfe6;
+$colorBackground3: #e0acfa;
+$color1: #209ce4;
+$color2: #e443c9;
+$color3: #9d2be9;
+$colorDark: #192976;
+$colorLight: #f2f2f2;
+
+// DEVICES SCREEN SIZES
+$mobile:480px;
+$tablet:768px;
+$desktop:1024px;
+
+
+// SPACING SIZE FOR MARGINS, PADDINGS AND GAPS
+$spaceBig: 10rem;
+$spaceRegular: 5rem;
+$spaceSmall: 2.5rem;
+$spaceTiny: 1.5rem;

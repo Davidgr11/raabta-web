@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+
+<head>
+    <!--TITLE-->
+    <title>Administración - Raabta</title>
+    <!--META-->
+    <meta charset="UTF-8">
+    <meta name="description" content="Panel de administración para gestionar accesos del curso">
+    <meta name="keywords" content="Administración, Raabta, Curso, Gestión">
+    <meta name="author" content="Aimee Vértiz">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--FAVICON-->
+    <link rel="icon" type="image/png" href="./build//assets/img/logo.avif">
+    <!--PAGE RELATIONS-->
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+    <main class="admin">
+        <div class="admin__container blockWidth">
+            <div class="admin__header">
+                <div class="header__logo">
+                    <img class="header__logo--img" src="./build/assets/img/logo.avif" alt="logo" loading="lazy" decoding="async">
+                    <p class="header__logo--text">RAABTA</p>
+                </div>
+                <h1 class="admin__title">Panel de Administración</h1>
+                <p>Gestiona los accesos y configuraciones del curso</p>
+            </div>
+
+            <div id="statusMessage" class="admin__status" style="display: none;"></div>
+
+            <form class="admin__form" id="adminForm">
+                <!-- Sección de Contraseñas -->
+                <div class="admin__section">
+                    <h2 class="admin__section-title">Contraseñas de Acceso</h2>
+                    <div class="admin__grid">
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1alumno">C1 - Alumno Actual:</label>
+                            <input class="admin__input" type="text" id="C1alumno" name="C1alumno" placeholder="Contraseña para alumnos actuales de C1">
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1exalumno">C1 - Ex-alumno:</label>
+                            <input class="admin__input" type="text" id="C1exalumno" name="C1exalumno" placeholder="Contraseña para ex-alumnos de C1">
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2alumno">C2 - Alumno Actual:</label>
+                            <input class="admin__input" type="text" id="C2alumno" name="C2alumno" placeholder="Contraseña para alumnos actuales de C2">
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2exalumno">C2 - Ex-alumno:</label>
+                            <input class="admin__input" type="text" id="C2exalumno" name="C2exalumno" placeholder="Contraseña para ex-alumnos de C2">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Módulos C1 -->
+                <div class="admin__section">
+                    <h2 class="admin__section-title">Módulos C1 - Disponibilidad</h2>
+                    <div class="admin__grid">
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1M1">Módulo 1:</label>
+                            <select class="admin__input" id="C1M1" name="C1M1">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1M2">Módulo 2:</label>
+                            <select class="admin__input" id="C1M2" name="C1M2">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1M3">Módulo 3:</label>
+                            <select class="admin__input" id="C1M3" name="C1M3">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C1M4">Módulo 4:</label>
+                            <select class="admin__input" id="C1M4" name="C1M4">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Módulos C2 -->
+                <div class="admin__section">
+                    <h2 class="admin__section-title">Módulos C2 - Disponibilidad</h2>
+                    <div class="admin__grid">
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2M1">Módulo 1:</label>
+                            <select class="admin__input" id="C2M1" name="C2M1">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2M2">Módulo 2:</label>
+                            <select class="admin__input" id="C2M2" name="C2M2">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2M3">Módulo 3:</label>
+                            <select class="admin__input" id="C2M3" name="C2M3">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="C2M4">Módulo 4:</label>
+                            <select class="admin__input" id="C2M4" name="C2M4">
+                                <option value="true">Disponible</option>
+                                <option value="false">No disponible</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Avisos -->
+                <div class="admin__section">
+                    <h2 class="admin__section-title">Avisos para Alumnos</h2>
+                    <div class="admin__grid">
+                        <div class="admin__field">
+                            <label class="admin__label" for="aviso1Texto">Aviso 1 - Texto:</label>
+                            <textarea class="admin__textarea" id="aviso1Texto" name="aviso1Texto" placeholder="Texto del primer aviso"></textarea>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="aviso1Link">Aviso 1 - Enlace:</label>
+                            <input class="admin__input" type="url" id="aviso1Link" name="aviso1Link" placeholder="https://ejemplo.com">
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="aviso2Texto">Aviso 2 - Texto:</label>
+                            <textarea class="admin__textarea" id="aviso2Texto" name="aviso2Texto" placeholder="Texto del segundo aviso"></textarea>
+                        </div>
+                        <div class="admin__field">
+                            <label class="admin__label" for="aviso2Link">Aviso 2 - Enlace:</label>
+                            <input class="admin__input" type="url" id="aviso2Link" name="aviso2Link" placeholder="https://ejemplo.com">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="admin__buttons">
+                    <button type="submit" class="admin__button" id="saveBtn">GUARDAR CAMBIOS</button>
+                    <button type="button" class="admin__button" id="loadDataBtn">RECARGAR</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <script src="aimee.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.acerca {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__title {
+        margin-bottom: v.$spaceSmall;
+        color: v.$colorDark;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: v.$spaceSmall;
+
+        @include m.desktop {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: v.$spaceTiny;
+
+        &--img {
+            width: 20rem !important;
+            height: 20rem !important;
+            border-radius: 50%;
+        }
+
+        &--subtitle {
+            color: v.$color3;
+        }
+
+        @include m.desktop {
+            gap: v.$spaceSmall;
+            flex-direction: row;
+            &--img {
+                width: 20rem !important;
+                height: 20rem !important;
+                flex: 0 0 20rem;
+            }
+
+            &:nth-child(1) {
+                grid-column: 1/3;
+            }
+
+            &:nth-child(2) {
+                grid-column: 3/5;
+            }
+
+            &:nth-child(3) {
+                grid-column: 1/5;
+            }
+        }
+
+    }
+}

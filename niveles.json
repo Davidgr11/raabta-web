@@ -1,0 +1,46 @@
+{
+    "C1": {
+        "title": "Bienvenido al Curso de Comunicación Animal Nivel 1",
+        "description": "Curso de introducción a la comunicación animal, donde aprenderás las bases para entender y comunicarte con los animales. Espero que disfrutes este curso tanto como yo, fue preparado con todo el amor. Recuerda que hablar con animales es como aprender un idioma nuevo, debes practicar para dominarlo. Gracias por confiar en mí, te abrazo a la distancia.",
+        "links": [
+            {
+                "text": "Módulo 1",
+                "url": "percepcion.html"
+            },
+            {
+                "text": "Módulo 2",
+                "url": "bases.html"
+            },
+            {
+                "text": "Módulo 3",
+                "url": "profundizacion.html"
+            },
+            {
+                "text": "Módulo 4",
+                "url": "arcoiris.html"
+            }
+        ]
+    },
+    "C2": {
+        "title": "Bienvenido al Curso de Comunicación Animal Nivel 2",
+        "description": "Curso avanzado de comunicación animal, donde profundizarás en técnicas y prácticas para mejorar tu conexión con los animales. Espero que disfrutes este curso tanto como yo, fue preparado con todo el amor. Recuerda que hablar con animales es como aprender un idioma nuevo, debes practicar para dominarlo. Gracias por confiar en mí, te abrazo a la distancia.",
+        "links": [
+            {
+                "text": "Módulo 1",
+                "url": "avanzado1.html"
+            },
+            {
+                "text": "Módulo 2",
+                "url": "avanzado2.html"
+            },
+            {
+                "text": "Módulo 3",
+                "url": "avanzado3.html"
+            },
+            {
+                "text": "Módulo 4",
+                "url": "avanzado4.html"
+            }
+        ]
+    }
+}

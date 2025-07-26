@@ -1,0 +1,16 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+[dev]
+  functions = "netlify/functions"
+  port = 3000
+  publish = "."
+
+[functions]
+  node_bundler = "esbuild"
+
+# Variables de entorno para desarrollo local
+[context.dev.environment]
+  JSONBIN__BIN__ID = "6877d32d3052b733d10d907a"
+  JSONBIN__API__KEY = "$2a$10$oynj9zaps1PGOBzYsKT2VerXK4XWQsxs1WmH6Nshrq6jsVFkBk6TC"

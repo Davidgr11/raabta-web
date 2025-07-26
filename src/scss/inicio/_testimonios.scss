@@ -1,0 +1,54 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.testimonios {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(6, 25rem);
+        gap: v.$spaceSmall;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        scrollbar-color: v.$colorBackground1 transparent;
+        scroll-snap-type: x mandatory;
+
+        @include m.tablet {
+            grid-template-columns: repeat(6, 30rem);
+        }
+    }
+
+    &__title {
+        margin-bottom: v.$spaceSmall;
+        color: v.$colorDark;
+    }
+
+    &__item {
+        background-color: v.$colorBackground2;
+        position: relative;
+        padding: v.$spaceSmall;
+        margin-bottom: v.$spaceSmall;
+        border-radius: v.$spaceTiny;
+        scroll-snap-align: start;
+        box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+
+        &--text {
+            padding-left: v.$spaceRegular;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 4rem;
+                height: 4rem;
+                top: 25px;
+                left: 25px;
+                background-image: url("../assets/img/inicio/quote.avif");
+                background-size: 4rem;
+            }
+        }
+    }
+}

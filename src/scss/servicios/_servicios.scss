@@ -1,0 +1,75 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.numberItem {
+    background-color: v.$color1;
+    color: v.$colorBackground1;
+    width: 6rem;
+    height: 6rem;
+    text-align: center;
+    border-radius: 50%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicios {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__container {
+        
+    }
+
+    &__description {
+        padding: v.$spaceSmall 0;;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: v.$spaceSmall;
+
+        @include m.tablet {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    &__item {
+        background-color: v.$colorBackground1;
+        box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.5);
+        padding: v.$spaceSmall;
+        border-radius: v.$spaceTiny;
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceTiny;
+
+        &--info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: v.$spaceSmall;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        &--price {
+            color: v.$color2;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        &--link {
+            @include m.btn(
+                v.$color1,
+                v.$colorBackground1,
+                v.$colorDark,
+                v.$colorBackground1
+            );
+        }
+    }
+}

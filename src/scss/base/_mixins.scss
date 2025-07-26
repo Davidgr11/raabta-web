@@ -1,0 +1,141 @@
+@use 'variables' as v;
+
+// MEDIA QUERIES
+@mixin mobile {
+    @media (min-width: v.$mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+// GRID
+@mixin gridCol($cols, $space) {
+    //@include gridCol(3, v.$spaceRegular)
+    display: grid;
+    grid-template-columns: repeat($cols, 1fr);
+    gap: $space;
+}
+
+@mixin gridRow($rows, $space) {
+    //@include gridRow(2, v.$spaceRegular)
+    display: grid;
+    grid-template-rows: repeat($rows, 1fr);
+    gap: $space;
+}
+
+@mixin gridSpecial($one, $two, $space) {
+    //@include grid2(1fr, 1fr, v.$spaceRegular)
+    display: grid;
+    grid-template-columns: $one $two;
+    gap: $space;
+}
+
+// CENTER ALIGNMENT
+@mixin alignLayout {
+    justify-content: center;
+    align-items: center;
+}
+
+// TRANSITIONS
+@mixin scale(){
+    transform: scale(1.05);
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+
+@mixin rotate($duracion: 2s) {
+    animation: rotar360 $duracion linear infinite;
+  
+    @keyframes rotar360 {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+  
+
+// HORIZONTAL SCROLL
+@mixin scrollHorizontal {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    /*
+    overscroll-behavior-x: contain;
+    scroll-snap-type: proximity;
+    scroll-snap-align:start;
+    */
+
+    > * {
+        scroll-snap-align: center;
+    }
+}
+
+// BUTTONS
+@mixin btn($bg, $color, $bg2, $color2) {
+    // Todas las declaraciones primero
+    padding: 1rem;
+    border-radius: v.$spaceTiny;
+    border-color: $bg;
+    font-weight: v.$fontWeightBold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: $bg;
+    color: $color;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+    // Luego las reglas anidadas
+    @include tablet {
+        //width: 50%;
+        //height: 5rem;
+    }
+
+    &:hover {
+        background-color: $bg2;
+        color: $color2;
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+}
+@mixin btn2($bg, $color, $bg2, $color2) {
+    // Todas las declaraciones primero
+    padding: 1rem;
+    border-radius: v.$spaceTiny;
+    border-color: $bg;
+    border: 0.3rem solid $bg;
+    font-weight: v.$fontWeightBold;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: unset !important;
+    color: $color;
+
+    // Luego las reglas anidadas
+    @include tablet {
+        //width: 50%;
+        //height: 5rem;
+    }
+
+    &:hover {
+        background-color: $bg2 !important;
+        color: v.$colorLight !important;
+        transition: all 0.2s linear;
+        cursor: pointer;
+    }
+}

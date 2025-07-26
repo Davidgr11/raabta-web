@@ -1,0 +1,65 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+// ANIMATE.CSS
+.animate__animated {visibility: visible !important;}
+.animate-on-scroll {opacity: 0;visibility: hidden;}
+
+.animate__slideInUp {animation: 0.5s ease-in 0.2s 1;}
+.animate__slideInLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__slideInDown {animation: 0.5s ease-in 0.2s 1;}
+.animate__zoomIn {animation: 0.5s ease-in 0.2s 1;}
+.animate__zoomInUp {animation: 0.5s ease-in 0.2s 1;}
+.animate__jackInTheBox {animation: 0.5s ease-in 0.2s 1;}
+.animate__rollIn {animation: 0.5s ease-in 0.2s 1;}
+.animate__rotateIn {animation: 0.5s ease-in 0.2s 1;}
+.animate__rotateDownLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__flipInX {animation: 0.5s ease-in 0.2s 1;}
+.animate__flipInY {animation: 0.5s ease-in 0.2s 1;}
+.animate__fadeInUp {animation: 0.5s ease-in 0.2s 1;}
+.animate__fadeIn {animation: 0.5s ease-in 0.2s 1;}
+.animate__fadeInLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__fadeInTopLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__bounceIn {animation: 0.5s ease-in 0.2s 1;}
+.animate__bounceInLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__bounce {animation: 0.5s ease-in 0.2s 1;}
+.animate__backInLeft {animation: 0.5s ease-in 0.2s 1;}
+.animate__pulse {animation: 0.5s ease-in 0.2s 1;}
+.animate__heartBeat {animation: 0.5s ease-in 0.2s 1;}
+.animate__swing {animation: 0.5s ease-in 0.2s 1;}
+.animate__rubberBand {animation: 0.5s ease-in 0.2s 1;}
+.animate__tada {animation: 0.5s ease-in 0.2s 1;}
+
+// Buttons
+.btnPrimary {
+    @include m.btn(v.$color2, v.$colorLight, v.$color3, v.$colorLight);
+}
+.border {
+    text-shadow:
+    2px 2px 0 v.$color3,
+    -2px 2px 0 v.$color3,
+    2px -2px 0 v.$color3,
+    -2px -2px 0 v.$color3,
+    2px 0px 0 v.$color3,
+    -2px 0px 0 v.$color3,
+    0px 2px 0 v.$color3,
+    0px -2px 0 v.$color3;
+    color: v.$colorLight;
+}
+
+.highlight {
+    background-color: v.$color2;
+    color: v.$colorLight;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+}
+.success {
+    color: green;
+    font-weight: bold;
+}
+.blueColor {
+    color: v.$color1;
+}

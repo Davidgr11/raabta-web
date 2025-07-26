@@ -1,0 +1,122 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.admin {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__form {
+        border: 0.5rem solid v.$color1;
+        border-radius: v.$spaceTiny;
+        padding: v.$spaceSmall;
+    }
+
+    &__section {
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceSmall;
+        border-bottom: 0.5rem solid v.$color1;
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: v.$spaceSmall;
+        margin-bottom: v.$spaceRegular;
+
+        @include m.tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    &__field {
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceTiny;
+    }
+
+    &__label {
+            font-weight: bold;
+            color: v.$color1;
+        }
+
+        &__input, &__textarea {
+            padding: v.$spaceTiny;
+            border-radius: v.$spaceTiny;
+            border: 0.1rem solid v.$color1;
+            background-color: v.$colorBackground1;
+
+            &:focus {
+                border-color: v.$color2;
+                outline: none;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: v.$spaceSmall;
+        }
+    &__button {
+        @include m.btn(
+            v.$color1,
+            v.$colorBackground1,
+            v.$colorDark,
+            v.$colorBackground1
+        );
+
+        // Transiciones suaves para los botones
+        transition: all 0.3s ease;
+        
+        // Estado de carga
+        &.loading {
+            opacity: 0.8;
+            cursor: wait;
+            
+            &::after {
+                content: '...';
+                animation: dots 1.5s infinite;
+            }
+        }
+    }
+}
+
+// Animación de puntos para estado de carga
+@keyframes dots {
+    0%, 20% { 
+        content: ''; 
+    }
+    40% { 
+        content: '.'; 
+    }
+    60% { 
+        content: '..'; 
+    }
+    80%, 100% { 
+        content: '...'; 
+    }
+}
+
+// Efecto shake para errores
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+    20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+.admin__status--error {
+    animation: shake 0.6s ease-in-out;
+}
+
+// Efecto bounce para éxito
+@keyframes bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+
+.admin__status--success {
+    animation: bounce 0.6s ease-in-out;
+}

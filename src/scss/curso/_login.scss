@@ -1,0 +1,69 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.login {
+    height: 100vh;
+
+    background-image: url('../assets/img/fondos/fondoPasto.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        background-color: v.$colorBackground3;
+        padding: v.$spaceSmall;
+        border-radius: v.$spaceTiny;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: v.$spaceSmall;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: v.$spaceSmall;
+
+        &--description {
+            color: v.$colorDark;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: v.$spaceSmall;
+
+            input {
+                background-color: transparent;
+                border: 0.3rem solid v.$colorDark;
+                border-radius: v.$spaceTiny;
+                padding: 1rem v.$spaceTiny;
+                color: v.$colorDark;
+                text-align: center;
+
+                &::placeholder {
+                    color: v.$colorDark;
+                    text-align: center;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            button {
+                box-shadow: none !important;
+                border: none;
+                @include m.btn(v.$color1, v.$colorBackground1, v.$colorBackground1, v.$color1);
+            } 
+        }
+    }
+}

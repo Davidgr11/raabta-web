@@ -1,0 +1,32 @@
+# Logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
+.env
+.env.local
+.env.production
+
+# Netlify
+.netlify/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build directories que no necesitas subir
+# (en tu caso, build/ parece que sí lo necesitas)

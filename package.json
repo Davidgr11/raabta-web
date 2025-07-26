@@ -1,0 +1,20 @@
+{
+  "name": "raabta-web",
+  "version": "1.0.0",
+  "description": "Plataforma web para cursos de comunicación animal - Raabta",
+  "main": "index.html",
+  "scripts": {
+    "build": "echo 'Static site ready'",
+    "dev": "netlify dev",
+    "deploy": "netlify deploy --prod"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.12"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "keywords": ["comunicación", "animales", "cursos"],
+  "author": "Devri",
+  "license": "ISC"
+}

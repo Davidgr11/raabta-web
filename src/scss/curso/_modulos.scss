@@ -1,0 +1,193 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.inicio {
+    background-image: url('../assets/img/fondos/fondoPasto.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+
+    &__principal {
+        margin-top: v.$spaceRegular;
+
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceSmall;
+
+        &--grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: v.$spaceSmall;
+            align-items: center;
+
+            @include m.tablet {
+                grid-template-columns: repeat(2, 1fr);
+                gap: v.$spaceRegular;
+                align-items: flex-start;
+            }
+        }
+
+        &--img {
+            width: 100%;
+            height: auto;
+
+            @include m.desktop {
+                height: 100%;
+                width: auto;
+                margin: 0 auto;
+                align-self: flex-start;
+            }
+        }
+    }
+}
+
+audio {
+    width: 100%;
+    color: v.$color1;
+}
+
+.video {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__subtitle {
+        padding: v.$spaceSmall 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 23rem;
+        border-radius: v.$spaceTiny;
+
+        @include m.mobile {
+            height: 30rem;
+        }
+
+        @include m.tablet {
+            height: 40rem;
+        }
+
+        @include m.desktop {
+            height: 55rem;
+        }
+    }
+}
+
+.documento {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__title {
+        padding: v.$spaceSmall 0;
+    }
+
+    iframe {
+        width: 100%;
+        height: 45rem;
+        border-radius: v.$spaceTiny;
+
+        @include m.mobile {
+            height: 55rem;
+        }
+
+        @include m.tablet {
+            height: 65rem;
+        }
+
+        @include m.desktop {
+            height: 75rem;
+        }
+    }
+}
+
+.regresar {
+    margin-top: v.$spaceRegular;
+    @include m.btn(v.$color2, v.$colorBackground2, v.$colorBackground2, v.$color2);
+}
+
+.modulo1,
+.modulo2,
+.modulo3,
+.modulo4 {
+    background-image: url('../assets/img/fondos/fondoNubes.avif');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: v.$spaceRegular 0;
+
+    &__ejercicio {
+        margin-top: v.$spaceSmall;
+        display: flex;
+        flex-direction: column;
+        gap: v.$spaceSmall;
+
+        &--title {
+            color: v.$color2;
+            font-weight: bold;
+        }
+
+        &--description {
+            font-weight: bold;
+        }
+
+        &--button {
+             @include m.btn(v.$color1, v.$colorBackground1, v.$colorBackground1, v.$color1);
+
+        }
+
+        &--faq {
+            display: flex;
+            flex-direction: column;
+            gap: v.$spaceTiny;
+
+            iframe {
+                width: 100%;
+                height: 45rem;
+                border-radius: v.$spaceTiny;
+
+                @include m.mobile {
+                    height: 55rem;
+                }
+
+                @include m.tablet {
+                    height: 65rem;
+                }
+
+                @include m.desktop {
+                    height: 75rem;
+                }
+            }
+        }
+    }
+
+    textarea {
+        width: 100%;
+        height: 100px;
+        border-radius: v.$spaceTiny;
+        padding: v.$spaceTiny;
+        border: 0.5rem solid v.$color1;
+        color: v.$colorDark;
+        background-color: v.$colorLight;
+
+        &::placeholder {
+            color: v.$color1;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: v.$color2;
+        }
+    }
+    .carta {
+        height: 500px;
+    }
+
+}
