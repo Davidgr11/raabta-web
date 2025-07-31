@@ -17,6 +17,24 @@
 </head>
 
 <body>
+    <header class="loginAdmin">
+        <div class="loginAdmin__container blockWidth">
+            <div class="header__logo">
+                <img class="header__logo--img" src="./build/assets/img/logo.avif" lazyalt="logo" loading="lazy"
+                    decoding="async">
+                <p class="header__logo--text">RAABTA</p>
+            </div>
+
+            <div class="loginAdmin__info">
+                <p class="loginAdmin__info--description">Ingresa con tu <span class="highlight">contraseña de administrador</span> para ingresar al panel.</p>
+                <form class="loginAdmin__form" action="" method="">
+                    <input class="loginAdmin__form--input psw" type="password" name="password" placeholder="Escribe la contraseña"
+                        >
+                    <button class="loginAdmin__form--button" type="submit">Ingresar</button>
+                </form>
+            </div>
+        </div>
+    </header>
     <main class="admin">
         <div class="admin__container blockWidth">
             <div class="admin__header">
@@ -156,6 +174,40 @@
     </main>
 
     <script src="aimee.js"></script>
+    <script>
+        const admin = document.querySelector('.admin');
+        const loginAdmin = document.querySelector('.loginAdmin__form');
+        const header = document.querySelector('.loginAdmin');
+
+        document.addEventListener('DOMContentLoaded', function() {
+            admin.style.display = 'none'; // Ocultar el panel de administración inicialmente
+        });
+
+        loginAdmin.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevenir el envío del formulario
+
+            // Aquí deberías validar la contraseña ingresada
+            const password = document.querySelector('.loginAdmin__form--input.psw').value;
+
+            if (password === 'avcADMIN') { // Reemplaza con tu contraseña real
+                admin.style.display = 'block'; // Mostrar el panel de administración
+                header.style.display = 'none'; // Ocultar el formulario de inicio de sesión
+            } else {
+                if( document.querySelector('.loginAdmin__info--error')) {
+                    document.querySelector('.loginAdmin__info--error').remove(); // Eliminar mensaje de error previo
+                }
+                const message = document.createElement('p');
+                message.textContent = 'Contraseña incorrecta. Inténtalo de nuevo.';
+                message.style.color = 'red';
+                message.classList.add('loginAdmin__info--error');
+                loginAdmin.appendChild(message);
+                setTimeout(() => {
+                    message.remove(); // Eliminar el mensaje después de 3 segundos
+                }, 3000);
+            }
+        });
+        
+    </script>
 </body>
 
 </html>

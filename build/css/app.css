@@ -870,12 +870,12 @@ table {
 .testimonios__item--text::before {
   content: "";
   position: absolute;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   top: 25px;
   left: 25px;
   background-image: url("../assets/img/inicio/quote.avif");
-  background-size: 4rem;
+  background-size: 3rem;
 }
 
 .footer {
@@ -1106,7 +1106,7 @@ table {
   animation: bounce 0.6s ease-in-out;
 }
 
-.login {
+.login, .loginAdmin {
   height: 100vh;
   background-image: url("../assets/img/fondos/fondoPasto.avif");
   background-repeat: no-repeat;
@@ -1117,7 +1117,7 @@ table {
   justify-content: center;
   align-items: center;
 }
-.login__container {
+.login__container, .loginAdmin__container {
   background-color: #e0acfa;
   padding: 2.5rem;
   border-radius: 1.5rem;
@@ -1127,24 +1127,24 @@ table {
   justify-content: center;
   gap: 2.5rem;
 }
-.login__info {
+.login__info, .loginAdmin__info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
 }
-.login__info--description {
+.login__info--description, .loginAdmin__info--description {
   color: #192976;
 }
-.login__info form {
+.login__info form, .loginAdmin__info form {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 2.5rem;
 }
-.login__info form input {
+.login__info form input, .loginAdmin__info form input {
   background-color: transparent;
   border: 0.3rem solid #192976;
   border-radius: 1.5rem;
@@ -1152,14 +1152,14 @@ table {
   color: #192976;
   text-align: center;
 }
-.login__info form input::placeholder {
+.login__info form input::placeholder, .loginAdmin__info form input::placeholder {
   color: #192976;
   text-align: center;
 }
-.login__info form input:focus {
+.login__info form input:focus, .loginAdmin__info form input:focus {
   outline: none;
 }
-.login__info form button {
+.login__info form button, .loginAdmin__info form button {
   box-shadow: none !important;
   border: none;
   padding: 1rem;
@@ -1174,7 +1174,7 @@ table {
   color: #bfe7f3;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.3);
 }
-.login__info form button:hover {
+.login__info form button:hover, .loginAdmin__info form button:hover {
   background-color: #bfe7f3;
   color: #209ce4;
   transition: all 0.2s linear;
@@ -1569,6 +1569,7 @@ audio {
   border-radius: 1.5rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 1.5rem;
 }
 .servicios__item--info {

@@ -1,7 +1,7 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
 
-.login {
+.login, .loginAdmin {
     height: 100vh;
 
     background-image: url('../assets/img/fondos/fondoPasto.avif');

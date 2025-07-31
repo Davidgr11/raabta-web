@@ -46,6 +46,7 @@
         border-radius: v.$spaceTiny;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: v.$spaceTiny;
 
         &--info {
